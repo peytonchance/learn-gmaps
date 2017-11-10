@@ -1,8 +1,62 @@
+body{
+  color: #fff;
+  font-family: 'Roboto';
+}
+
+h1{
+  color: #000;
+  font-family: 'Montserrat';
+}
+.header p{
+  color: #000;
+}
+
+.text-box{
+  padding: 5% 15% 5% 5%;
+}
 .map {
  height: 400px;
  width: 100%;
+ z-index: 0;
+ position: relative;
 }
 
 .row{
 margin-top: 5%;
+}
+
+.overlay{
+  height: 400px;
+  width: 540px;
+  opacity: 0;
+  background-color: black;
+  position: absolute;
+  z-index: 1;
+  transition: 0.4s;
+}
+
+.overlay:hover{
+  opacity: 0.8;
+  transition: 0.4s;
+}
+
+.footer{
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  justify-content: space-between;
+  color: #000;
+}
+.links{
+  align-self: auto;
+  margin-bottom: 15px;
+}
+
+.footer a{
+  color: #55A5D2;
+}
+
+.footer img{
+  max-height: 100px;
 }

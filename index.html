@@ -4,47 +4,90 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body>
-    <div class="container">
-      <div class="row">
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <a href="http://peytonchance.com"><img src="img/signature.png" alt="Peyton Chance's signature."></a>
+      </div>
+      <div class="col-12 col-sm-6 header">
         <h1>Where's home?</h1>
+        <p>An exploration of my geographical past (and of the Google Maps API).</p>
       </div>
-    <div class="row">
-      <div class="col-12 col-sm-6">
-        <div class="map" id="maryland"></div>
-      </div>
-      <div class="col-12 col-sm-6">
-        <div class="map" id="carolina"></div>
-      </div>
+
     </div>
-    <div class="row">
-      <div class="col-12 col-sm-6">
-        <div class="map" id="shenandoah"></div>
-      </div>
-      <div class="col-12 col-sm-6">
-        <div class="map" id="quito"></div>
-      </div>
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="overlay" id="maryland-overlay">
+        <div class="text-box">
+          <h2>Millington, MD</h2>
+          <p>I grew up on a farm (all crops, no animals...sorry) on the Eastern Shore of Maryland.</p>
+        </div>
+
+        </div>
+        <div class="map" id="maryland"></div>
+
+  </div>
+    <div class="col-12 col-sm-6">
+      <div class="overlay">
+        <div class="text-box">
+          <h2>Chapel Hill, NC</h2>
+          <p>I'm a proud Tar Heel! I chose Carolina for its strong academics across the board (I had <strong>no</strong> idea what I wanted to study when I was a first-year), school spirit and affordability.</p>
+        </div>
+        </div>
+        <div class="map" id="carolina"></div>
+
     </div>
   </div>
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="overlay">
+        <div class="text-box">
+          <h2>Winchester, VA</h2>
+          <p>In the summer after my sophomore year I worked as an actor for Shenandoah Summer Music Theatre. I had a blast and got live out one of my lifelong dreams - plus I lived next to a Sheetz for two whole months!</p>
+        </div>
+      </div>
+        <div class="map" id="shenandoah"></div>
+    </div>
+    <div class="col-12 col-sm-6">
+      <div class="overlay">
+        <div class="text-box">
+          <h2>Quito, Pichincha, Ecuador</h2>
+          <p>In the summer of 2015 I studied abroad right in the heart of Quito. Ecuador is an incredible place, but studying abroad is not for the faint of heart. Despite its ups and downs, I still hold this place in my tiny American heart.</p>
+      </div>
+      </div>
+        <div class="map" id="quito"></div>
+    </div>
+  </div>
+</div>
+
+  <div class="container">
+    <div class="row footer">
+      <a href="http://peytonchance.com"><img src="img/signature.png" alt="Peyton Chance's signature."></a>
+      <div class="links"><a href="https://github.com/peytonchance">GitHub</a> | <a href="http://peytonchance.com">Portfolio</a></div>
+    </div>
+</div>
 
 
 
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
-    <script src="js/creds.js"></script>
-    <script>
-    function loadScript() {
-      var script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = 'https://maps.googleapis.com/maps/api/js?v=3' +
-          '&key=' + myMapsKey +'&callback=initMap';
-      document.body.appendChild(script);
-    }
-    window.onload = loadScript;
-  </script>
-  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/creds.js"></script>
+  <script>
+  function loadScript() {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://maps.googleapis.com/maps/api/js?v=3' +
+        '&key=' + myMapsKey +'&callback=initMap';
+    document.body.appendChild(script);
+  }
+  window.onload = loadScript;
+</script>
+
+</body>
 </html>
